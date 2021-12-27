@@ -19,10 +19,10 @@ func _ready():
 	randomize()
 	main_menu.connect("request_new_level", self, "generate_molecules")
 	main_menu.connect("request_music", self, "_on_request_music")
-	global.connect("main_molecule_resized", self, "_on_main_molecule_resized")
+	# global.connect("main_molecule_resized", self, "_on_main_molecule_resized")
 	
 	for molecule in molecules.get_children():
-		total_molecule_mass += molecule.molecule_mass
+		total_molecule_mass += molecule.MoleculeMass
 	# In tutorial, ensure that the biggest molecule has to be absorbed too
 	total_molecule_mass *= 1.5
 
@@ -96,11 +96,12 @@ func _generate_single_molecule(radius, existing_molecules) -> Array:
 
 
 func _on_main_molecule_resized() -> void:
-	if global.main_molecule.radius <= 0:
-		message_label.text = "You lost"
-	else:
-		if global.main_molecule.molecule_mass > total_molecule_mass * 0.5:
-			message_label.text = "You won!"
+	pass
+	# if global.main_molecule.radius <= 0:
+		# message_label.text = "You lost"
+	# else:
+		# if global.main_molecule.MoleculeMass > total_molecule_mass * 0.5:
+			# message_label.text = "You won!"
 
 
 func _on_request_music(enabled: bool) -> void:

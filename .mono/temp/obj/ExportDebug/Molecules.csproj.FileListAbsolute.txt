@@ -1,0 +1,8 @@
+/Users/tarren/Documents/GitHub/molecules/.mono/temp/bin/ExportDebug/Molecules.dll
+/Users/tarren/Documents/GitHub/molecules/.mono/temp/bin/ExportDebug/Molecules.pdb
+/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/ExportDebug/Molecules.csprojAssemblyReference.cache
+/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/ExportDebug/Molecules.AssemblyInfoInputs.cache
+/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/ExportDebug/Molecules.AssemblyInfo.cs
+/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/ExportDebug/Molecules.csproj.CoreCompileInputs.cache
+/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/ExportDebug/Molecules.dll
+/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/ExportDebug/Molecules.pdb

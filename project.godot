@@ -10,7 +10,6 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
@@ -21,7 +20,7 @@ config/icon="res://assets/images/icon.png"
 
 [autoload]
 
-global="*res://scripts/global.gd"
+Global="*res://scripts/global.gd"
 
 [debug]
 
@@ -46,6 +45,13 @@ dismiss={
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
+
+[mono]
+
+debugger_agent/wait_timeout=13000
+export/include_scripts_content=true
+export/aot/enabled=true
+export/aot/full_aot=true
 
 [physics]
 

@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "/Users/tarren/Downloads/Godot_mono.app/Contents/MacOS/Godot",
+      "type": "process",
+      "args": [
+        "--build-solutions",
+        "--path",
+        "${workspaceRoot}",
+        "--no-window",
+        "-q"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

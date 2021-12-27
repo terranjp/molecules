@@ -16,8 +16,9 @@ const LARGE_PROPELLING_FORCE = 3
 const COLOR_VECTOR_MIN = Color(1, 0.25, 0)
 const COLOR_VECTOR_MAX = Color(0, 0.75, 1)
 
+
 # Using RigidBody2D.mass has some undesired implications
-var molecule_mass
+var MoleculeMass = 10;
 var molecule_scene = load("res://scenes/Molecule.tscn")
 
 
@@ -28,10 +29,10 @@ func _ready():
 	shape.shape = CircleShape2D.new()
 	area_shape.shape = CircleShape2D.new()
 	if is_main:
-		global.main_molecule = self
+		Global.mainMolecule = self
 		set_radius(radius)
 	else:
-		global.connect("main_molecule_resized", self, "adjust_color")
+		Global.connect("MainMoleculeResized", self, "adjust_color")
 		set_radius(radius)
 		adjust_color()
 
@@ -42,8 +43,8 @@ func adjust_color() -> void:
 	the given molecule is compared to the main molecule
 	"""
 	var c = 1
-	if global.main_molecule and global.main_molecule.radius > 0:
-		c = self.radius / (global.main_molecule.radius * 2)
+	if Global.main_molecule and Global.main_molecule.radius > 0:
+		c = self.radius / (Global.main_molecule.radius * 2)
 		c = clamp(c, 0, 1)
 	var color_vector = COLOR_VECTOR_MIN * c + COLOR_VECTOR_MAX * (1 - c)
 	mesh.material.set_shader_param("color", color_vector)
@@ -51,7 +52,7 @@ func adjust_color() -> void:
 
 func set_radius(value):
 	radius = value
-	self.molecule_mass = _radius_to_mass(value)
+	self.MoleculeMass = _radius_to_mass(value)
 	if is_inside_tree():
 		shape.shape.radius = value
 		area_shape.shape.radius = value
@@ -60,12 +61,12 @@ func set_radius(value):
 		
 		if is_main:
 			# TODO: improve resized signal
-			global.emit_signal("main_molecule_resized")
+			Global.emit_signal("main_molecule_resized")
 	
 	if radius <= 0:
 		queue_free()
 		if is_main:
-			global.main_molecule = null
+			Global.main_molecule = null
 
 
 func _mass_to_radius(a: float) -> float:
@@ -85,9 +86,9 @@ func add_mass(added_mass: float, mass_linear_velocity: Vector2) -> void:
 	"""
 	if added_mass <= 0:
 		return
-	var new_mass = self.molecule_mass + added_mass
+	var new_mass = self.MoleculeMass + added_mass
 	var new_velocity = (
-		self.linear_velocity * self.molecule_mass / new_mass +
+		self.linear_velocity * self.MoleculeMass / new_mass +
 		mass_linear_velocity * added_mass / new_mass
 	)
 	var new_radius = _mass_to_radius(new_mass)
@@ -119,7 +120,7 @@ func _process(_delta):
 		)
 		
 		var small_mass_reduced = _radius_to_mass(small_radius_reduced)
-		var mass_delta = small.molecule_mass - small_mass_reduced
+		var mass_delta = small.MoleculeMass - small_mass_reduced
 		
 		small.radius = small_radius_reduced
 		self.add_mass(mass_delta, small.linear_velocity)
@@ -130,10 +131,10 @@ func propel(direction: Vector2) -> void:
 		return
 	
 	direction = direction.normalized()
-	var propelling_mass = self.molecule_mass * rand_range(
+	var propelling_mass = self.MoleculeMass * rand_range(
 		MIN_PROPELLING_MASS, MAX_PROPELLING_MASS
 	)
-	var new_mass = self.molecule_mass - propelling_mass
+	var new_mass = self.MoleculeMass - propelling_mass
 	
 	self.radius = _mass_to_radius(new_mass)
 	
