@@ -3,7 +3,7 @@ extends Control
 signal request_new_level
 signal request_music
 
-var music_enabled = true
+var music_enabled = false
 
 
 func _input(_event):
@@ -33,4 +33,4 @@ func _on_Music_pressed():
 	music_enabled = not music_enabled
 	var text = "Music: On" if music_enabled else "Music: Off"
 	$CenterContainer/VBoxContainer/Music.text = text
-	emit_signal("request_music", music_enabled)
+	# emit_signal("request_music", music_enabled)

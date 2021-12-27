@@ -1,8 +1,9 @@
-/Users/tarren/Documents/GitHub/molecules/.mono/temp/bin/Debug/Molecules.dll
-/Users/tarren/Documents/GitHub/molecules/.mono/temp/bin/Debug/Molecules.pdb
-/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/Debug/Molecules.csprojAssemblyReference.cache
-/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/Debug/Molecules.AssemblyInfoInputs.cache
-/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/Debug/Molecules.AssemblyInfo.cs
-/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/Debug/Molecules.csproj.CoreCompileInputs.cache
-/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/Debug/Molecules.dll
-/Users/tarren/Documents/GitHub/molecules/.mono/temp/obj/Debug/Molecules.pdb
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\bin\Debug\Molecules.dll
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\bin\Debug\Molecules.pdb
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.csproj.AssemblyReference.cache
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.AssemblyInfoInputs.cache
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.AssemblyInfo.cs
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.csproj.CoreCompileInputs.cache
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.dll
+C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.pdb
