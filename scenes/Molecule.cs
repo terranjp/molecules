@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class Molecule : RigidBody2D
 {
 
-
     [Export] public bool IsMain = false;
 
     private float _radius = 30;
@@ -18,7 +17,7 @@ public class Molecule : RigidBody2D
         set => SetRadius(value);
     }
 
-    protected float MoleculeMass = 10;
+    [Export] public float MoleculeMass = 10;
 
     private readonly Color _colorVectorMin = new Color(1, 0.25F, 0);
     private readonly Color _colorVectorMax = new Color(0, 0.75F, 1);
@@ -45,7 +44,6 @@ public class Molecule : RigidBody2D
 
         global = (GDScript)GD.Load("res://scripts/global.gd");
         
-
         SetRadius(_radius);
         AdjustColor();
     }

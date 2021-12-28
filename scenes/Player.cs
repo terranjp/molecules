@@ -4,12 +4,12 @@ namespace Molecules.scenes
 {
     public class Player : Molecule
     {
-
         [Signal] public delegate void PlayerResized(string value);
         private const float SmallPropellingForce = 150;
         private const float LargePropellingForce = 3;
-        private const float MinPropellingMass = (float)0.0008;
-        private const float MaxPropellingMass = (float)0.0016;
+        private const float MinPropellingMass = (float)0.008;
+        private const float MaxPropellingMass = (float)0.016;
+
         public override void _PhysicsProcess(float delta)
         {
 
