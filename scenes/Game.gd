@@ -49,7 +49,7 @@ func generate_molecules():
 		molecule.queue_free()
 	
 	var main_molecule = molecule_scene.instance()
-	main_molecule.is_main = true
+	main_molecule.IsMain = true
 	main_molecule.position = screen_size * 0.5
 	
 	var placeholder_molecules = _generate_placeholder_molecules(main_molecule)
@@ -57,18 +57,17 @@ func generate_molecules():
 		var molecule = molecule_scene.instance()
 		molecule.position = pm[0]
 		molecules.add_child(molecule)
-		molecule.radius = float(pm[1])
-		total_molecule_mass += molecule.molecule_mass
+		molecule.Radius = float(pm[1])
+		total_molecule_mass += molecule.MoleculeMass
 	
 	molecules.add_child(main_molecule)
-	total_molecule_mass += main_molecule.molecule_mass
+	total_molecule_mass += main_molecule.MoleculeMass
 
 
 func _generate_placeholder_molecules(main_molecule):
 	var generated_molecules = []
 	# Add the main molecule, so it can be avoided
-	generated_molecules.append([main_molecule.position, main_molecule.radius])
-	
+	generated_molecules.append([$Player.position,$Player.Radius])
 	for radius in range(72, 4, -1):
 		var molecule = _generate_single_molecule(radius, generated_molecules)
 		generated_molecules.append(molecule)
@@ -110,6 +109,8 @@ func _on_main_molecule_resized() -> void:
 
 func _on_player_resized() -> void:
 
+	var player = $Player
+	
 	if $Player.Radius <= 0:
 		message_label.text = "You lost"
 

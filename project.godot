@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="MoleculesCS"
+config/name="Molecules"
 run/main_scene="res://scenes/Game.tscn"
 config/icon="res://assets/images/icon.png"
 

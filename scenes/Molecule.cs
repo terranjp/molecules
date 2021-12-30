@@ -46,6 +46,8 @@ public class Molecule : RigidBody2D
         
         SetRadius(_radius);
         AdjustColor();
+
+
     }
 
     public override void _Process(float delta)
