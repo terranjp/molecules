@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tarren\\Documents\\GitHub\\molecules\\Molecules.csproj": {}
+    "C:\\Users\\tarre\\Documents\\GitHub\\molecules\\Molecules.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tarren\\Documents\\GitHub\\molecules\\Molecules.csproj": {
+    "C:\\Users\\tarre\\Documents\\GitHub\\molecules\\Molecules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tarren\\Documents\\GitHub\\molecules\\Molecules.csproj",
+        "projectUniqueName": "C:\\Users\\tarre\\Documents\\GitHub\\molecules\\Molecules.csproj",
         "projectName": "Molecules",
-        "projectPath": "C:\\Users\\Tarren\\Documents\\GitHub\\molecules\\Molecules.csproj",
-        "packagesPath": "C:\\Users\\Tarren\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tarren\\Documents\\GitHub\\molecules\\.mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\tarre\\Documents\\GitHub\\molecules\\Molecules.csproj",
+        "packagesPath": "C:\\Users\\tarre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tarre\\Documents\\GitHub\\molecules\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Tarren\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tarre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,14 +42,6 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "dependencies": {
-            "Microsoft.NETFramework.ReferenceAssemblies": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.0.2, )",
-              "autoReferenced": true
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }

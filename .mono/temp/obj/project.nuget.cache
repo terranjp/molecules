@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OlW+4P+yE/slx4R7c7JXuhKosQPaWH0RzNXg+Np0udfdb3wA1c8CeBLTQUrneIL0Fujt2PuPUHCyfs15LfHcXA==",
+  "dgSpecHash": "tXDs4G0LNivwHw1aKPU760DniUXflRfEyuFJmqGBLDMb8/Lm1ui7C0PfpQx6LT9gAMkn84xWC0tHPEQ8zJobxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tarren\\Documents\\GitHub\\molecules\\Molecules.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Tarren\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
-    "C:\\Users\\Tarren\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.2\\microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\tarre\\Documents\\GitHub\\molecules\\Molecules.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

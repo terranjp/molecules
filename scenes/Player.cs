@@ -2,59 +2,59 @@ using Godot;
 
 namespace Molecules.scenes
 {
-    public class Player : Molecule
-    {
-        [Signal] public delegate void PlayerResized(string value);
-        private const float SmallPropellingForce = 150;
-        private const float LargePropellingForce = 3;
-        private const float MinPropellingMass = (float)0.008;
-        private const float MaxPropellingMass = (float)0.016;
+	public class Player : Molecule
+	{
+		[Signal] public delegate void PlayerResized(string value);
+		private const float SmallPropellingForce = 150;
+		private const float LargePropellingForce = 3;
+		private const float MinPropellingMass = (float)0.008;
+		private const float MaxPropellingMass = (float)0.016;
 
-        public override void _PhysicsProcess(float delta)
-        {
+		public override void _PhysicsProcess(float delta)
+		{
 
-            if (IsMain && Input.IsActionJustPressed("propel"))
-                Propel(GetViewport().GetMousePosition() - Position);
-        }
-
-
-        public override void _Ready()
-        {
-            base._Ready();
-            IsMain = true;
-            global.Set("main_molecule", this);
-            var c = global.Call("emit_signal", "main_molecule_resized");
-            EmitSignal("PlayerResized", "some_data");
-            GD.Print();
-        }
+			if (IsMain && Input.IsActionJustPressed("propel"))
+				Propel(GetViewport().GetMousePosition() - Position);
+		}
 
 
-        public void Propel(Vector2 direction)
-        {
-            if (Radius <= 0)
-            {
-                return;
-            }
+		public override void _Ready()
+		{
+			base._Ready();
+			IsMain = true;
+			global.Set("main_molecule", this);
+			var c = global.Call("emit_signal", "main_molecule_resized");
+			EmitSignal("PlayerResized", "some_data");
+			GD.Print();
+		}
 
-            Vector2 directionNorm = direction.Normalized();
 
-            var propellingMass = (float)(MoleculeMass * GD.RandRange(MinPropellingMass, MaxPropellingMass));
+		public void Propel(Vector2 direction)
+		{
+			if (Radius <= 0)
+			{
+				return;
+			}
 
-            float newMass = (float)(MoleculeMass - propellingMass);
+			Vector2 directionNorm = direction.Normalized();
 
-            Radius = MassToRadius(newMass);
+			var propellingMass = (float)(MoleculeMass * GD.RandRange(MinPropellingMass, MaxPropellingMass));
 
-            var propellingMolecule = _moleculeScene.Instance() as Molecule;
+			float newMass = (float)(MoleculeMass - propellingMass);
 
-            propellingMolecule.Radius = MassToRadius(propellingMass);
-            propellingMolecule.Position = Position + directionNorm * (Radius + propellingMolecule.Radius * 5);
+			Radius = MassToRadius(newMass);
 
-            propellingMolecule.ApplyCentralImpulse(directionNorm * SmallPropellingForce);
+			var propellingMolecule = _moleculeScene.Instance() as Molecule;
 
-            ApplyCentralImpulse(-directionNorm * LargePropellingForce);
+			propellingMolecule.Radius = MassToRadius(propellingMass);
+			propellingMolecule.Position = Position + directionNorm * (Radius + propellingMolecule.Radius * 5);
 
-            GetParent().CallDeferred("add_child_below_node", this, propellingMolecule);
-        }
-        //  }
-    }
+			propellingMolecule.ApplyCentralImpulse(directionNorm * SmallPropellingForce);
+
+			ApplyCentralImpulse(-directionNorm * LargePropellingForce);
+
+			GetParent().CallDeferred("add_child_below_node", this, propellingMolecule);
+		}
+		//  }
+	}
 }

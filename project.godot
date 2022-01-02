@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Molecules"
-run/main_scene="res://scenes/Game.tscn"
+run/main_scene="res://scenes/Molecule.tscn"
 config/icon="res://assets/images/icon.png"
 
 [autoload]
@@ -61,5 +61,10 @@ common/enable_object_picking=false
 
 [rendering]
 
+2d/options/use_nvidia_rect_flicker_workaround=true
+2d/snapping/use_gpu_pixel_snap=true
 threads/thread_model=2
+quality/filters/use_nearest_mipmap_filter=true
+quality/subsurface_scattering/quality=2
 environment/default_clear_color=Color( 0, 0, 0, 1 )
+quality/filters/msaa=1

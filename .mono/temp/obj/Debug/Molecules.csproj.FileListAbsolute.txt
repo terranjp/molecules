@@ -7,3 +7,12 @@ C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.Assemb
 C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.csproj.CoreCompileInputs.cache
 C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.dll
 C:\Users\Tarren\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.pdb
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\bin\Debug\Molecules.dll
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\bin\Debug\Molecules.pdb
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.csproj.AssemblyReference.cache
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.AssemblyInfoInputs.cache
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.AssemblyInfo.cs
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.csproj.CoreCompileInputs.cache
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.dll
+C:\Users\tarre\Documents\GitHub\molecules\.mono\temp\obj\Debug\Molecules.pdb
